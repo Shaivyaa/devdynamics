@@ -18,7 +18,7 @@ export default function DateDistributionContainer() {
   const [data, setData] = useState<DashboardData | null>(null);
 
   useEffect(() => {
-    fetch("https://devdynamics-assignment.netlify.app/db.json")
+    fetch("http://localhost:3001/data")
       .then((response) => response.json())
       .then((data) => setData(data))
       .catch((error) => console.error("Error fetching data:", error));
