@@ -17,7 +17,7 @@ export default function GraphContainer() {
   const [data, setData] = useState<DashboardData | null>(null);
 
   useEffect(() => {
-    fetch("http://localhost:3001/data")
+    fetch("https://devdynamics-assignment.netlify.app/db.json")
       .then((response) => response.json())
       .then((data) => setData(data))
       .catch((error) => console.error("Error fetching data:", error));
