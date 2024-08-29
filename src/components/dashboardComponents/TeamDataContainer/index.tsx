@@ -18,7 +18,7 @@ export default function TeamDataContainer() {
   const [data, setData] = useState<DashboardData | null>(null);
 
   useEffect(() => {
-    fetch("http://localhost:3001/data")
+    fetch("https://devdynamics-assignment.netlify.app/data")
       .then((response) => response.json())
       .then((data) => setData(data))
       .catch((error) => console.error("Error fetching data:", error));
